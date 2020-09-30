@@ -41,8 +41,7 @@ Brought to you by FaceX.io, OfflineFaceRecSDK  can now be used to integrate on-d
 
 An **AAR file** contains a software library used for developing Android apps. It is structurally similar to an . APK **file** (Android Package), but it allows a developer to store a reusable component that can be used across multiple different apps. To integrate AAR  into your android project:
 - Purchase Active Liveness SDK license from [facex portal](https://search.facex.io).
-- Download the `file.json` config file from the portal. Make sure file name is `file.json`.
-- Create `assets` directory in the android project ( if not already there) and copy the downloaded `file.json` to `assets` directory.
+
 - Download the latest `FaceRecSDK.aar` release from [here](https://github.com/teamfacex/AndroidofflineFaceRecSDK/releases/latest/download/FaceRecSDK.aar).
 - Open android studio and add the liveness SDK to your android project
   - Click  `File > New > New Module`.
