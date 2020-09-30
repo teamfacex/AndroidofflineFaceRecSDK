@@ -9,7 +9,6 @@
 Brought to you by FaceX.io, OfflineFaceRecSDK  can now be used to integrate on-device Face Recognition into your Android applications
 
 
-
 ## 📑 Index
 * [Documentation](#-documentation)
 * [Features](#-features)
@@ -36,13 +35,13 @@ Brought to you by FaceX.io, OfflineFaceRecSDK  can now be used to integrate on-d
 #### Using [ AAR  (Android Archive)](https://developer.android.com/studio/projects/android-library)
 
 An **AAR file** contains a software library used for developing Android apps. It is structurally similar to an . APK **file** (Android Package), but it allows a developer to store a reusable component that can be used across multiple different apps. To integrate AAR  into your android project:
-- Purchase Active Liveness SDK license from [facex portal](https://search.facex.io).
+- Purchase Offline Recognition SDK license from [FaceX](mailto:team@facex.io).
 
 - Download the latest `FaceRecSDK.aar` release from [here](https://github.com/teamfacex/AndroidofflineFaceRecSDK/releases/latest/download/FaceRecSDK.aar).
-- Open android studio and add the liveness SDK to your android project
+- Open android studio and add the Recognition SDK to your android project
   - Click  `File > New > New Module`.
   - Click `Import .JAR/.AAR Package` from repo directory then click `Next`.
-  -  Enter the location of the `liveness.aar` file in the cloned directory then click `Finish`
+  -  Enter the location of the `FaceRecSDK.aar` file in the cloned directory then click `Finish`
 - Make sure the library is listed at the top of your `settings.gradle` file, as shown here for a library named "FaceRecSDK":
   -  `include ':app',  ':FaceRecSDK'`
  - Open the app module's `build.gradle` file and add a new line to the `dependencies` block as shown in the following snippet:
