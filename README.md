@@ -28,8 +28,7 @@ Brought to you by FaceX.io, OfflineFaceRecSDK  can now be used to integrate on-d
 - Step 3: Scroll down to Mobile SDKs and Select Active Liveness
 - Step 3: Purchase a plan matching your license requirement after adding required details 
 - Step 4: Navigate to Mobile SDK Tab & Select [License History](https://search.facex.io/#/home/mobilesdk/license)
-- Step 5: Download the json file for Android SDK from the offline license Section
-- Step 6: Download the Offline Active Livenesss Android SDK from this Github [AndroidOfflineFaceRecSDK](https://github.com/teamfacex/AndroidofflineFaceRecSDK)
+- Step 65: Download the OfflineFaceRec Android SDK from this Github [AndroidOfflineFaceRecSDK](https://github.com/teamfacex/AndroidofflineFaceRecSDK)
 
 ## 🌟 Features
 - Supports Android 5.0+
