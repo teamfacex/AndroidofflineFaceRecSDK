@@ -6,7 +6,7 @@
 
 # AndroidOfflineFaceRecSDK
 ## 📜 Introduction
-Brought to you by FaceX.io, OfflineFaceRecSDK Android can now be used to integrate on-device Face Recognition into your Android applications
+Brought to you by FaceX.io, OfflineFaceRecSDK  can now be used to integrate on-device Face Recognition into your Android applications
 
 
 
