@@ -116,7 +116,7 @@ class MainActivity : AppCompatActivity(),onFaceRecognitionListener{
 
    override fun onRegisterSuccess(p0: String?, p1: Bitmap?) {
         TODO("Not yet implemented")
-        // p0-- encrypted vector
+        // p0-- vector
     }
     
      override fun onRegisterError(p0: String?) {
