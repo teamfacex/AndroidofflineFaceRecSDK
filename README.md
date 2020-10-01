@@ -86,9 +86,9 @@ The output of the Search method is:
  - Euclidean distance between the Search image and registered Image
  
  The Euclidean distance represents the level of closeness/ Match between the images with a threshold of 0.8 set as the limit
-  - If the distance is 0, the images are a perfect match/ the same image was found in the database.
-  - If distance is less than 0.8, the images are different images of the same person
+  - If distance is less than 0.8, the images are of same person, but different images
   - If distance is more than 0.8, the images are not a match.
+  - If the distance is 0, the images are a perfect match/ the same image was found in the database.
   
  The SDK provides the match with the least distance below the 0.8 distance threshold.
  
