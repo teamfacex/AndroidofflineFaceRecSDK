@@ -17,7 +17,7 @@ Brought to you by FaceX.io, OfflineFaceRecSDK  can now be used to integrate on-d
 * [How to use](#-how-to-use)
    * [Permissions Required](#permissions)
    * [Methods](#method)   
-   * [Interpreting the Output](#interpreting-the-output-of-search-method) 
+   * [Interpreting the Output](#interpreting-euclidean-distance) 
    * [Implementation](#implementations)  
 * [Interface](#-interfaces)
    * [onFaceRecognitionListener](#onFaceRecognitionListener)
@@ -73,18 +73,31 @@ An **AAR file** contains a software library used for developing Android apps. It
 ```
 ### Method
 The FaceRecognition SDK provides three main functions
- - Registration Method- Generation of a Vector from Input (Camera/Gallery)
- - Update Method- Adding of a List<string> of Vectors on SDK !!Please note that this method replaces all existing Vectors in SDK with your list
- - Search Method- Comparing an Input to Registered String.
+- [Registration Method](#registration-method)- Generation of a Vector from Input (Camera/Gallery)
+- [Update Method](#update-method)- Adding of a List<string> of Vectors on SDK 
+- [Search Method](#search-method)- Comparing an Input to Registered String.
 
-### Interpreting the Output of Search Method
+#### Registeration Method
+The Output of the Registeration method:
+- Vector string
+- Cropped Image of the Registered person
+
+The Vector string has to be saved in a list<string> to be used as input for Update Method.
+
+#### Update Method
+Please note regarding Update Method:
+- This method replaces all existing Vectors in SDK with your list
+- Everytime the app opens you need to load data using Update Method
+ 
+#### Output of Search Method
 After you register vectors on an SDK using Registeration Method or update a string of vectors on your device using update method, you can call the search method.
 
 The output of the Search method is:
  - Position of Matching person in your List<string>
  - Cropped Search image used
  - Euclidean distance between the Search image and registered Image
- 
+
+### Interpreting Euclidean Distance
  The Euclidean distance represents the level of closeness/ Match between the images with a threshold of 0.8 set as the limit
   - If distance is less than 0.8, the images are of same person, but different images
   - If distance is more than 0.8, the images are not a match.
