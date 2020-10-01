@@ -77,7 +77,7 @@ The FaceRecognition SDK provides three main functions
  - Update Method- Adding of a String of Vectors on SDK
  - Search Method- Comparing an Input to Registered String.
 
-### Intrepreting the Output of Search Method
+### Interpreting the Output of Search Method
 After you register vectors on an SDK using Registeration Method or update a string of vectors on your device using update method, you can call the search method.
 
 The output of the Search method is:
