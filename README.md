@@ -48,6 +48,7 @@ An **AAR file** contains a software library used for developing Android apps. It
    - `dependencies { implementation project(":FaceRecSDK")  }`
 
 ## 🐒 How to use
+### Permissions
 - Make sure to get the camera & Storage permission.
 ```
   String[] permissionArrays = new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE};
@@ -66,6 +67,13 @@ An **AAR file** contains a software library used for developing Android apps. It
             requestPermissions(permissionArrays, 11111)
         }
 ```
+### Method
+The FaceRecognition SDK provides three main functions
+ - Registration Method- Generation of a Vector from Input (Camera/Gallery)
+ - Update Method- Adding of a String of Vectors on SDK
+ - Search Method- Comparing an Input to Registered String.
+
+
 #### Kotlin
 
 ``` 
@@ -136,45 +144,37 @@ import com.app.Utils.onFaceRecognitionListener
 public class Mainactivity extends AppCompatActivity implements onFaceRecognitionListener{
   private FaceRecongintion  faceRecongintion;
    Button register, search;
-   
-   
   
   @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-      faceRecongintion = new FaceRecongintion(this, R.id.main_view, this);
-      
-      
-       register.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                faceRecongintion.FaceRegistrtion();
-            }
-        });
-        
-        
-         faceRecongintion.addVectors(vectors); // for input images for search 
-         
-        
+//Initialize Face Recognition SDK
+       faceRecongintion = new FaceRecongintion(this, R.id.main_view, this);
 
-        search.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+//Calling Registration Method
+// Adding Image input (via Camera/gallery) for Vector generation/ Registering Vectors         
+         faceRecongintion.FaceRegistrtion();  
+
+//Calling Update Method
+// for input images for search & To update input for Search 
+//Vectors to be provided as a List<string>
+
+         faceRecongintion.addVectors(vectors); 
+
+//Calling Search Method
+// please Ensure to Call Update Method/ Registeration Method for your required database before calling this mehtod 
+//accepts input from camera or gallery
             
-            // please add vector before calling search
-                faceRecongintion.FaceSearch();
-            }
-        });
-
+           faceRecongintion.FaceSearch();
 }
 
- 
+//output for Registeration Method 
     @Override
     public void onRegisterSuccess(String s, Bitmap bitmap) {
 
-        // s -- encrypted vector
+        // s -- Registered vector output from SDK and the registered image to be saved by the developer
 
     }
 
@@ -186,9 +186,11 @@ public class Mainactivity extends AppCompatActivity implements onFaceRecognition
          // s -- error msg 
     }
 
+
+//output for Serch Method
     @Override
     public void onSearchSuccess(int i, String s, Bitmap bitmap) {
-
+         //Output from the SDK for Search method
         // i -- matched postion in provided input array
         // s -- distance with input arry and capture/selcted user image
 
