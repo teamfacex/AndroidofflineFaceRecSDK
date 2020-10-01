@@ -210,7 +210,7 @@ public class Mainactivity extends AppCompatActivity implements onFaceRecognition
     }
 
 
-//output for Serch Method
+//output for Search Method
     @Override
     public void onSearchSuccess(int i, String s, Bitmap bitmap) {
          //Output from the SDK for Search method
