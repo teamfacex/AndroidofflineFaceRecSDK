@@ -74,7 +74,7 @@ An **AAR file** contains a software library used for developing Android apps. It
 ### Method
 The FaceRecognition SDK provides three main functions
  - Registration Method- Generation of a Vector from Input (Camera/Gallery)
- - Update Method- Adding of a String of Vectors on SDK
+ - Update Method- Adding of a List<string> of Vectors on SDK !!Please note that this method replaces all existing Vectors in SDK with your list
  - Search Method- Comparing an Input to Registered String.
 
 ### Interpreting the Output of Search Method
