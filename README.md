@@ -130,8 +130,8 @@ class MainActivity : AppCompatActivity(),onFaceRecognitionListener{
 #### Java
 
 ```
-import io.facex.liveness.Liveness  
-import io.facex.liveness.LivenessListener
+import com.app.Utils.FaceRecongintion  
+import com.app.Utils.onFaceRecognitionListener
 
 public class Mainactivity extends AppCompatActivity implements onFaceRecognitionListener{
   private FaceRecongintion  faceRecongintion;
@@ -209,7 +209,7 @@ public class Mainactivity extends AppCompatActivity implements onFaceRecognition
 
 ```
 faceRecongintion.FaceRegistrtion(),  faceRecongintion.FaceSearch(); creates a fragment, so it needs a view to bind the fragment.
-Pass in the id of the fragment container using the liveness constructor.
+Pass in the id of the fragment container using the FaceRecongintion constructor.
 eg: fragment_holder
 
 
