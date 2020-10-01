@@ -17,8 +17,7 @@ Brought to you by FaceX.io, OfflineFaceRecSDK  can now be used to integrate on-d
 * [How to use](#-how-to-use)
    * [Permissions Required](#permissions)
    * [Methods](#method)   
-   * [Using Kotlin](#kotlin)
-   * [Using Java](#java)
+
 * [Interface](#-interfaces)
    * [onFaceRecognitionListener](#onFaceRecognitionListener)
 * [Supported OS & SDK Versions](#-supported-os--sdk-versions)
@@ -91,6 +90,11 @@ The output of the Search method is:
   - If distance is more than 0.8, the images are not a match.
   
  The SDK provides the match with the least distance below the 0.8 distance threshold.
+ 
+### Interpreting the Output of Search Method 
+There are two methods provided:
+   * [Using Kotlin](#kotlin)
+   * [Using Java](#java)
 
 #### Kotlin
 
