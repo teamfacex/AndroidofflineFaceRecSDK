@@ -115,43 +115,64 @@ class MainActivity : AppCompatActivity(),onFaceRecognitionListener{
   override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_test)
-
-        faceRecongintion = FaceRecongintion(this, R.id.main_view, this)
-
-        vectors = ArrayList<String>()
-        register?.setOnClickListener(View.OnClickListener { faceRecongintion!!.FaceRegistrtion() })
-
-        search?.setOnClickListener(View.OnClickListener { faceRecongintion!!.FaceSearch() })
-
-        val permissionArrays = arrayOf(Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+        
+        
+        //enable camera and storage peermissions
+        
+         val permissionArrays = arrayOf(Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE)
 
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             requestPermissions(permissionArrays, 11111)
         }
+        
+        
+        //Initialize Face Recognition SDK
+
+        faceRecongintion = FaceRecongintion(this, R.id.main_view, this)
+
+ //Calling Registration Method
+ // Adding Image input (via Camera/gallery) for Vector generation/ Registering Vectors    
+       faceRecongintion!!.FaceRegistrtion()
+       
+ // Calling Update Method
+ // for input images for search & To update input for Search 
+ // Vectors to be provided as a List<string>
+    
+    faceRecongintion.addVectors(vectors); 
+    
+    
+ //Calling Search Method
+ // please Ensure to Call Update Method/ Registeration Method for your required database before calling this mehtod 
+ //accepts input from camera or gallery
+ 
+       faceRecongintion!!.FaceSearch()
+
+       
     }
 
 
 
    override fun onRegisterSuccess(p0: String?, p1: Bitmap?) {
-        TODO("Not yet implemented")
+      
         // p0-- vector
+        
+          // s -- Registered vector output from SDK and the registered image to be saved by the developer
     }
     
      override fun onRegisterError(p0: String?) {
-        TODO("Not yet implemented")
+        
         //p0:Register error
+        
     }
     
       override fun onSearchSuccess(p0: Int, p1: String?, p2: Bitmap?) {
-        TODO("Not yet implemented")
-        
         //p0:position of matching user
         //p1:distance from two users
     }
 
     override fun onSearchError(p0: String?) {
-        TODO("Not yet implemented")
+       
         //p0 --Search Error Message
     }
   
