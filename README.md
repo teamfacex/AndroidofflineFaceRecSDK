@@ -14,6 +14,7 @@ Brought to you by FaceX.io, OfflineFaceRecSDK  can now be used to integrate on-d
 * [Features](#-features)
 * [Installation](#-installation)
   * [AAR](#using--aar--android-archive)
+  * [Adding Dependecies](#adding-dependencies)
 * [How to use](#-how-to-use)
    * [Permissions Required](#permissions)
    * [Methods](#method)   
@@ -50,6 +51,18 @@ An **AAR file** contains a software library used for developing Android apps. It
   -  `include ':app',  ':FaceRecSDK'`
  - Open the app module's `build.gradle` file and add a new line to the `dependencies` block as shown in the following snippet:
    - `dependencies { implementation project(":FaceRecSDK")  }`
+   
+   #### Adding Dependencies
+
+
+```  
+  
+* Add Following dependencies in app level build.gradle
+
+```
+
+   implementation 'com.google.firebase:firebase-ml-vision:24.0.3'
+
 
 ## 🐒 How to use
 ### Permissions
