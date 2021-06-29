@@ -58,10 +58,10 @@ An **AAR file** contains a software library used for developing Android apps. It
 ```  
   
 * Add Following dependencies in app level build.gradle
-
+    implementation 'com.google.firebase:firebase-ml-vision-face-model:20.0.1'
 ```
 
-   implementation 'com.google.firebase:firebase-ml-vision:24.0.3'
+  
 
 
 ## 🐒 How to use
